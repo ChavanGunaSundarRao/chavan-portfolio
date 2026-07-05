@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/db342538c3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="chavanlogo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Data Scientist | ML Engineer</p>
+            <h1>Hi,I'm <span>Chavan</span><br>Guna Sundar Rao</h1>
+        </div>
+    </div> 
+</div>
+<!-----------about-------------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="AboutImg.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm a Computer Science graduate specializing in Data Science with a passion for Machine Learning, Data Analytics, and Web Development. I enjoy building intelligent applications, interactive dashboards, and responsive websites that solve real-world problems. I'm committed to continuous learning and creating innovative solutions through technology.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Languages</span><br>Python, SQL, JavaScript, HTML5, CSS3</li>
+                        <li><span>Data Science & Machine Learning</span><br>Scikit-learn, Pandas, NumPy, Data Analysis, Predictive Modeling</li>
+                        <li><span>Web Development</span><br>Responsive Websites using HTML, CSS, JavaScript and Streamlit</li>
+                        <li><span>Data Visualization</span><br>Power BI, Matplotlib, Streamlit Dashboards</li>
+                        <li><span>Tools & Technologies</span><br>Git, GitHub, VS Code, Jupyter Notebook, Google Sheets API</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Mar 2026 - Present</span>
+                        <strong>Data Science Intern - GradTwin</strong><br>
+                        Developed end-to-end machine learning solutions using Python, Pandas, NumPy, and Scikit-learn. Built interactive dashboards with Streamlit and Power BI while working with MySQL for data management.
+                        </li>
+                        <li>
+                            <span>Oct 2025 - Dec 2025</span>
+                            <strong>Google AI-ML Intern - EduSkills</strong><br>
+                            Performed data preprocessing, exploratory data analysis (EDA), and implemented machine learning models for classification and prediction. Visualized insights using Matplotlib.
+                        </li>
+                        <li>
+                            <span>Aug 2025 - Sep 2025</span>
+                            <strong>Associate Data Analyst Intern - Excelerate</strong><br>
+                            Built interactive dashboards and analyzed datasets to identify business trends, improving reporting efficiency and supporting data-driven decision-making.
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022 - 2026</span><br>B.Tech in Computer Science & Engineering (Data Science) <br>Mohan Babu University</li>
+                        <li><span>2020 - 2022</span><br>Intermediate (MPC) <br>Sri Chaitanya Junior College</li>
+                        <li><span>2019 - 2020</span><br>Secondary School (SSC) <br>Sri Raju High School</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!---------services-------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-laptop-code" style="font-size: 50px;color: #fff;"></i>
+                <h2>Web Development</h2>
+                <p>Build responsive, modern, and user-friendly websites using HTML, CSS, JavaScript, Python, and Streamlit with clean UI and optimized performance.</p>
+                <a href="#" onclick="openModal('webModal')">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-brain" style="font-size: 50px;color: #fff;"></i>
+                <h2>Machine Learning</h2>
+                <p>Develop predictive machine learning models for data analysis, customer segmentation, predictive maintenance, and intelligent decision-making.</p>
+                <a href="#" onclick="openModal('mlModal')">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-chart-line" style="font-size: 50px;color: #fff;"></i>
+                <h2>Data <br> Analytics</h2>
+                <p>Create interactive dashboards and insightful visualizations using Power BI, Streamlit, Pandas, and Matplotlib to transform data into business insights.</p>
+                <a href="#" onclick="openModal('dataModal')">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------portfolio---------------- -->
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Predictive Maintenance System.png" alt="">
+                <div class="layer">
+                    <h3>Predictive Maintenance System</h3>
+                    <p>Built a machine learning application that predicts equipment failures using sensor data. 
+Performed data preprocessing, visualization, model training, and deployed an interactive dashboard with Streamlit.
+</p>
+                    <a href="https://github.com/ChavanGunaSundarRao/Predictive-Maintenance-Dashboard" target="_blank"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Customer Segmentation.png" alt="">
+                <div class="layer">
+                    <h3>Customer Segmentation</h3>
+                    <p>Developed an unsupervised machine learning model using K-Means clustering to group customers based on spending behavior, with interactive visualizations and performance evaluation.</p>
+                    <a href="https://github.com/ChavanGunaSundarRao/Customer-Segmentation"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Portfolio Website.png" alt="">
+                <div class="layer">
+                    <h3>Personal Portfolio</h3>
+                    <p>Designed and developed a fully responsive personal portfolio website using HTML, CSS, JavaScript, and Google Sheets API integration for the contact form.</p>
+                    <a href="https://chavangunasundarrao.github.io/chavan-portfolio/"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- <a href="#" class="btn">See more</a> -->
+    </div>
+ </div>
+<!-- ---------------contact-------------- -->
+ <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-at"></i> gunasundarraochavan@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 9515353629</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/gunasundarraochavan/"><i class="fa-brands fa-square-linkedin"></i></a>
+                    <a href="https://github.com/ChavanGunaSundarRao"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="https://www.instagram.com/gunasundarraochavan/"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://x.com/guna_rao02008"><i class="fa-brands fa-square-twitter"></i></a>
+                </div>
+                <a href="Chavan_Guna_Sundar_Rao_CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="YOUR_FORM_NAME">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                    <span id="msg"></span>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright Guna.<i class="fa-solid fa-heart"></i></p>
+    </div>
+ </div>
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+<script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbyyAVmkvYMWi4SfW-00d2TsAMyzM025eRBhvZbz0l3yFNn941wJ--vTB2QFoIElo7jN/exec'
+	const form = document.forms['YOUR_FORM_NAME']
+    const msg  = document.getElementById("msg")
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form),  mode: "no-cors" })			
+			.then(response => {
+                msg.innerHTML = "Message sent successfully";
+                msg.style.color = "#61b752";
+                form.reset();
+                setTimeout(function(){
+                    msg.innerHTML = "";
+                },5000);
+                 
+            })
+			.catch(error => {
+                msg.innerHTML = "Failed to send message!";
+                msg.style.color = "red";
+                setTimeout(() => {
+                    msg.innerHTML = "";
+                },5000);
+                console.error(error)
+            });
+	});
+</script>
+<script>
+
+function openModal(id){
+    document.getElementById(id).style.display="block";
+}
+
+function closeModal(id){
+    document.getElementById(id).style.display="none";
+}
+
+window.onclick=function(event){
+
+    const modals=document.querySelectorAll(".modal");
+
+    modals.forEach(function(modal){
+
+        if(event.target==modal){
+            modal.style.display="none";
+        }
+
+    });
+
+}
+
+</script>
+<div id="webModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('webModal')">&times;</span>
+        <h2>Web Development</h2>
+        <p>
+            I develop responsive, modern, and user-friendly websites using
+            HTML, CSS, JavaScript, Python, and Streamlit.
+        </p>
+        <h3>Technologies</h3>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Streamlit</li>
+            <li>Git & GitHub</li>
+        </ul>
+        <h3>What I Build</h3>
+        <ul>
+            <li>Portfolio Websites</li>
+            <li>Business Websites</li>
+            <li>Dashboard Applications</li>
+            <li>Responsive Landing Pages</li>
+        </ul>
+    </div>
+</div>
+<div id="mlModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal('mlModal')">&times;</span>
+
+        <h2><i class="fa-solid fa-brain"></i> Machine Learning</h2>
+
+        <p>
+            I build intelligent machine learning solutions that analyze data,
+            identify patterns, and generate accurate predictions. My experience
+            includes predictive modeling, customer segmentation, and data-driven
+            applications using Python and Scikit-learn.
+        </p>
+
+        <h3>Technologies</h3>
+
+        <ul>
+            <li>Python</li>
+            <li>Scikit-learn</li>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>Matplotlib</li>
+            <li>Jupyter Notebook</li>
+        </ul>
+
+        <h3>Projects</h3>
+
+        <ul>
+            <li>Predictive Maintenance System</li>
+            <li>Customer Segmentation using K-Means Clustering</li>
+            <li>Data Analysis & Predictive Modeling</li>
+        </ul>
+
+        <h3>What I Can Do</h3>
+
+        <ul>
+            <li>Data Preprocessing & Feature Engineering</li>
+            <li>Classification & Regression Models</li>
+            <li>Clustering & Customer Segmentation</li>
+            <li>Model Evaluation & Performance Analysis</li>
+            <li>Interactive ML Dashboards with Streamlit</li>
+        </ul>
+
+    </div>
+
+</div>
+<div id="dataModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal('dataModal')">&times;</span>
+
+        <h2><i class="fa-solid fa-chart-line"></i> Data Analytics</h2>
+
+        <p>
+            I transform raw data into meaningful insights through data analysis,
+            interactive dashboards, and visualization. Using Python, Power BI,
+            and Streamlit, I build analytical solutions that support better
+            business decisions.
+        </p>
+
+        <h3>Technologies</h3>
+
+        <ul>
+            <li>Power BI</li>
+            <li>Python</li>
+            <li>Pandas</li>
+            <li>NumPy</li>
+            <li>Matplotlib</li>
+            <li>Streamlit</li>
+        </ul>
+
+        <h3>Projects</h3>
+
+        <ul>
+            <li>Interactive Sales Dashboard</li>
+            <li>Customer Segmentation Analysis</li>
+            <li>Predictive Maintenance Analytics</li>
+            <li>Business Data Visualization</li>
+        </ul>
+
+        <h3>What I Can Do</h3>
+
+        <ul>
+            <li>Data Cleaning & Preprocessing</li>
+            <li>Interactive Dashboard Development</li>
+            <li>Business Intelligence Reporting</li>
+            <li>Exploratory Data Analysis (EDA)</li>
+            <li>Data Visualization & Insights</li>
+        </ul>
+
+    </div>
+
+</div>
+</body>
+</html>
